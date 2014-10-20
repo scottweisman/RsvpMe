@@ -14,7 +14,7 @@ gem 'active_model_serializers'
 
 gem 'foundation-rails'
 
-gem 'angularjs-rails'
+gem 'bower-rails'
 
 group :development do
   gem 'spring'

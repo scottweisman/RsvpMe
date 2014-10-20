@@ -1,0 +1,28 @@
+<section id="rsvpapp" ng-controller="MainCtrl">
+  <ng-view></ng-view>
+
+  <form id="rsvp-form">
+    <div class="row">
+      <div class="large-12 columns">
+        <label>Your Name
+          <input type="text" placeholder="Your Name" />
+        </label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-6 columns">
+        <label>Choose Your Favorite</label>
+        <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
+        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+        <label>Number of People
+          <input type="text" placeholder="Number of People" />
+        </label>
+      </div>
+    </div>
+  </form>
+
+ </section>

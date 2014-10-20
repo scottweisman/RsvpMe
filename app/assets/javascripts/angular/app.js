@@ -1,6 +1,13 @@
-var app = angular.module("AveryRsvp", ['ngResource', 'ngRoute']);
-
-app.config(['$httpProvider', function ($httpProvider) {
-  // CSRF
-  $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+angular
+  .module('app', ['ngRoute', 'ngResource'])
+  .config(['$routeProvider', function ($routeProvider) {
+    $routeProvider.when('/', {
+      controller: 'HomeCtrl'
+    }).when('/:status', {
+      controller: 'HomeCtrl',
+    }).when('/guests', {
+      controller: 'HomeCtrl',
+    }).otherwise({
+      redirctTo: '/'
+    });
 }]);

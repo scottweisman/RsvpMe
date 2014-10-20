@@ -1,0 +1,11 @@
+<section id="rsvpapp" ng-controller="MainCtrl">
+<ng-view></ng-view>
+
+ <ul>
+    <li ng-repeat="rsvp in rsvps">
+      <span>{{rsvp.name}}</span>
+      <p>{{rsvp.number}}</p>
+    </li>
+  </ul>
+
+</section>
