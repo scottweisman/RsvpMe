@@ -10,7 +10,7 @@ class Api::V1::RsvpsController < ApplicationController
   end
 
   def create
-    respond_with :api, :v1, Rsvp.create(rsvp_param)
+    respond_with :api, :v1, Rsvp.create(rsvp_params)
   end
 
   def update
