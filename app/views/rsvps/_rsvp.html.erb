@@ -1,0 +1,5 @@
+<% if @rsvp.attending %>
+  <h4>Thanks <%= @rsvp.first_name %>, we can't wait to see you!</h4>
+<% else %>
+  <h4>Sorry, We'll miss you <%= @rsvp.first_name %>.</h4>
+<% end %>

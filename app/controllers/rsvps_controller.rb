@@ -1,53 +1,30 @@
 class RsvpsController < ApplicationController
-  before_action :set_rsvp, only: [:show, :edit, :update, :destroy]
 
-  # GET /rsvps
   def index
     @rsvps = Rsvp.all
   end
 
-  # GET /rsvps/1
   def show
+    @rsvp = Rsvp.find(params[:id])
   end
 
-  # GET /rsvps/new
   def new
     @rsvp = Rsvp.new
   end
 
-  # GET /rsvps/1/edit
-  def edit
-  end
-
-  # POST /rsvps
   def create
-    @rsvp = Rsvp.create!(rsvp_params)
-    respond_to do |format|
-      format.html { redirect_to @rsvp, notice: 'Rsvp was successfully created.' }
-      format.js
-    end
-  end
-
-  # PATCH/PUT /rsvps/1
-  def update
-    if @rsvp.update(rsvp_params)
-      redirect_to @rsvp, notice: 'Rsvp was successfully updated.'
+    @rsvp = Rsvp.new(rsvp_params)
+    if @rsvp.save
+      respond_to do |format|
+        format.html { redirect_to @rsvp, notice: 'Rsvp was successfully created.' }
+        format.js
+      end
     else
-      render :edit
-    end
-  end
 
-  # DELETE /rsvps/1
-  def destroy
-    @rsvp.destroy
-    redirect_to rsvps_url, notice: 'Rsvp was successfully destroyed.'
+    end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_rsvp
-      @rsvp = Rsvp.find(params[:id])
-    end
 
     # Only allow a trusted parameter "white list" through.
     def rsvp_params

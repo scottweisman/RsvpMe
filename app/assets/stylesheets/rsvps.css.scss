@@ -6,6 +6,7 @@ html, body {
 body {
   font-family: $primary-font;
   background-color: $pink;
+  text-align: center;
 }
 
 h1, h2, h3, h4 {
@@ -23,9 +24,9 @@ h1, h2, h3, h4 {
 }
 
 .background {
-  background-image: image-url('avery-brackets-white-sm.png');
+  background-image: image-url('avery-brackets-white-sm-shadow.png');
   background-size: cover;
-  height: 513px;
+  height: 514px;
   padding: 10px;
   margin: 20px;
 
@@ -41,17 +42,20 @@ h1, h2, h3, h4 {
 .form_container {
   width: 600px;
   margin: 0 auto;
-  text-align: center;
   padding-top: 70px;
 }
 
 label {
-  font-family: $sexy-font;
+  font-family: $primary-font;
   color: $pink;
 }
 
+input[type="text"] {
+  text-align: center;
+}
+
 input[type=radio] {
-  display: none
+  // display: none
 }
 
 input:checked + span {
@@ -60,4 +64,9 @@ input:checked + span {
 
 .button {
   font-family: $primary-font;
+}
+
+#rsvp_number {
+  width: 200px;
+  margin: 0 auto;
 }
