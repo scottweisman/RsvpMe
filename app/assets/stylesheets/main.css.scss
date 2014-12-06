@@ -5,9 +5,11 @@ html, body {
 
 body {
   font-family: $primary-font;
-  background-color: $light-pink;
   text-align: center;
   margin-top: 10px;
+  @media only screen and (min-device-width : 760px) {
+    background-color: $light-pink;
+  }
 }
 
 h1, h2, h3, h4 {
@@ -16,41 +18,49 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-  font-size: 42px;
+  font-size: 26px;
+  @media only screen and (min-device-width : 760px) {
+    font-size: 42px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  @media only screen and (min-device-width : 760px) {
+    font-size: 28px;
+  }
 }
 
 h4 {
-font-size: 32px;
+  font-size: 18px;
+  @media only screen and (min-device-width : 760px) {
+    font-size: 32px;
+  }
 }
 
 .sexy {
   font-family: $sexy-font;
 }
 
-.container {
-  // width: 1000px;
-  // margin: 20px auto 0;
-}
-
 .background {
-  background-image: image-url('avery-brackets-white-sm.png');
-  background-size: cover;
-  position: absolute;
-  width: 970px;
-  height: 606px;
-  // padding: 20px 0;
-  // margin: 0 auto;
-
-  // position: absolute;
-  top: 20px;
-  left: 50%;
-  margin-left: -480px;
-  z-index: -9999;
-
+  @media only screen and (min-device-width : 760px) {
+    background-image: image-url('avery-brackets-white-sm.png');
+    background-size: cover;
+    position: absolute;
+    width: 970px;
+    height: 606px;
+    top: 20px;
+    left: 50%;
+    margin-left: -480px;
+    z-index: -9999;
+   }
 }
 
 .form_container {
-  width: 600px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 90px 0;
+  padding: 40px 0;
+  @media only screen and (min-device-width : 760px) {
+    padding: 90px 0;
+  }
 }
