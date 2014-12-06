@@ -20,8 +20,8 @@ class RsvpsController < ApplicationController
         format.html { redirect_to @rsvp, notice: 'Rsvp was successfully created.' }
         format.js
       else
-        format.html { redirect_to @rsvp, notice: 'Something went wrong. Please try again.' }
-        format.js
+        format.html { render "new", notice: 'Something went wrong. Please try again.' }
+        format.js { render "new" }
       end
     end
   end

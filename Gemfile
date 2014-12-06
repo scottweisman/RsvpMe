@@ -13,7 +13,7 @@ gem 'thin'
 
 gem 'foundation-rails'
 gem 'simple_form'
-gem 'parsley_simple_form', github: 'formaweb/parsley_simple_form'
+gem "parsley-rails"
 
 group :development do
   gem 'spring'
