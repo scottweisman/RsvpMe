@@ -10,16 +10,12 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc, require: false
 gem 'thin'
-gem 'active_model_serializers'
 
 gem 'foundation-rails'
-
-gem 'bower-rails'
 
 group :development do
   gem 'spring'
   gem 'quiet_assets'
-
 end
 
 group :staging, :production do
