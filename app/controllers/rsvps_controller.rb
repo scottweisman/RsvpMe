@@ -14,13 +14,15 @@ class RsvpsController < ApplicationController
 
   def create
     @rsvp = Rsvp.new(rsvp_params)
-    if @rsvp.save
-      respond_to do |format|
+
+    respond_to do |format|
+      if @rsvp.save
         format.html { redirect_to @rsvp, notice: 'Rsvp was successfully created.' }
         format.js
+      else
+        format.html { redirect_to @rsvp, notice: 'Something went wrong. Please try again.' }
+        format.js
       end
-    else
-
     end
   end
 

@@ -1,18 +1,25 @@
 <div class="form_container">
   <h2><span class="sexy">Avery's</span> Winter <span class="sexy">One</span>-derland!</h2>
-  <%= simple_form_for(@rsvp, remote: true) do |f| %>
-    <h3>We hope you can come and celebrate with us!</h3>
+  <%= parsley_simple_for(@rsvp, remote: true) do |f| %>
+    <h3>We hope you can celebrate with us!</h3>
 
     <%= f.error_notification %>
 
     <div class="form-inputs">
       <%= f.input :name, label: "Your Name" %>
-      <%= f.input :attending, as: :radio_buttons %>
+
+      <div class="input radio required rsvp_attending">
+        <input type="radio" id="rsvp_attending_true" name="rsvp[attending]" value="true" checked>
+        <label for="rsvp_attending_true">Yes, I'll be there!</label>
+        <input type="radio" id="rsvp_attending_false" name="rsvp[attending]" value="false">
+        <label for="rsvp_attending_false">Sorry I can't make it.</label>
+     </div>
+
       <%= f.input :number, label: "Number of people" %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "RSVP", input_html: { class: 'rsvp_button' } %>
+      <%= f.button :submit, "RSVP", class: 'round' %>
     </div>
   <% end %>
 </div>
