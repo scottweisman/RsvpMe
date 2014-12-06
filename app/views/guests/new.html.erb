@@ -1,0 +1,26 @@
+<%= form_for :rsvp, remote: true do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :attending %>
+  <%= f.radio_button :attending, "Yes" %>
+  <%= f.radio_button :attending, "No" %>
+  <%= f.label :number, "Number of people" %>
+  <%= f.text_field :number %>
+  <%= f.submit %>
+<% end %>
+
+
+<script>
+  $('form').submit(function() {
+    var valuesToSubmit = $(this).serialize();
+    $.ajax({
+      type: "POST"
+      url: $(this).attr('action'), //sumbits it to the given url of the form
+      data: valuesToSubmit,
+      dataType: "JSON"
+    }).success(function(json){
+      //act on result.
+    });
+    return false; // prevents normal behaviour
+  });
+</script>
