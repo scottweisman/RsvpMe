@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc, require: false
 gem 'thin'
 
 gem 'foundation-rails'
+gem 'simple_form'
 
 group :development do
   gem 'spring'
@@ -20,5 +21,6 @@ end
 
 group :staging, :production do
   gem 'rails_12factor'
+  gem 'font_assets'
 end
 

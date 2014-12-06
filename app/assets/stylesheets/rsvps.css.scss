@@ -1,0 +1,63 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: $primary-font;
+  background-color: $pink;
+}
+
+h1, h2, h3, h4 {
+  font-family: $primary-font;
+  color: $pink;
+}
+
+.sexy {
+  font-family: $sexy-font;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.background {
+  background-image: image-url('avery-brackets-white-sm.png');
+  background-size: cover;
+  height: 513px;
+  padding: 10px;
+  margin: 20px;
+
+  // height: 600px;
+  // position: absolute;
+  // top: 20px;
+  // left: 50%;
+  // margin-left: -480px;
+  // z-index: -9999;
+
+}
+
+.form_container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 70px;
+}
+
+label {
+  font-family: $sexy-font;
+  color: $pink;
+}
+
+input[type=radio] {
+  display: none
+}
+
+input:checked + span {
+    //your styles for the span next to the checked radio
+}
+
+.button {
+  font-family: $primary-font;
+}

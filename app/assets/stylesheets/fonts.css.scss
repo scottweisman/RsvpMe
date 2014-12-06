@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'MA-Sexy';
+    src:url(font-path('MA-Sexy.ttf.woff')) format('woff'),
+        url(font-path('MA-Sexy.ttf.svg') + '#MA-Sexy') format('svg'),
+        url(font-path('MA-Sexy.ttf.eot')),
+        url(font-path('MA-Sexy.ttf.eot') + '?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'Poiret-One';
+    src:url(font-path('Poiret-One.ttf.woff')) format('woff'),
+        url(font-path('Poiret-One.ttf.svg') + '#Poiret-One') format('svg'),
+        url(font-path('Poiret-One.ttf.eot')),
+        url(font-path('Poiret-One.ttf.eot') + '?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,18 @@
+<div class="form_container">
+  <h2><span class="sexy">Avery's</span> Winter <span class="sexy">One</span>-derland!</h2>
+  <h3>We hope you can come and celebrate with us!</h3>
+  <%= simple_form_for(@rsvp, remote: true) do |f| %>
+
+    <div class="form-inputs">
+      <%= f.input :name, label: "Your Name" %>
+      <%= f.input :attending, as: :radio_buttons %>
+      <%= f.input :number, label: "Number of people" %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "RSVP", input_html: { class: 'rsvp_button' } %>
+    </div>
+  <% end %>
+</div>
+
+
