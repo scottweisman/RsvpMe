@@ -26,6 +26,12 @@ class RsvpsController < ApplicationController
     end
   end
 
+  def destroy
+    @rsvp = Rsvp.find(params[:id])
+    @rsvp.destroy
+    redirect_to rsvps_path, notice: 'RSVP Deleted'
+  end
+
   private
 
     # Only allow a trusted parameter "white list" through.
