@@ -15,6 +15,8 @@ gem 'foundation-rails'
 gem 'simple_form'
 gem "parsley-rails"
 
+gem 'newrelic_rpm'
+
 group :development do
   gem 'spring'
   gem 'quiet_assets'
