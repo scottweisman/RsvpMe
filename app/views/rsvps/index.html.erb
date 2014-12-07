@@ -1,4 +1,4 @@
-<h1>Listing rsvps</h1>
+<h1>RSVPs</h1>
 
 <table>
   <thead>
@@ -16,9 +16,7 @@
         <td><%= rsvp.name %></td>
         <td><%= rsvp.attending %></td>
         <td><%= rsvp.number %></td>
-        <td><%= link_to 'Show', rsvp %></td>
-        <td><%= link_to 'Edit', edit_rsvp_path(rsvp) %></td>
-        <td><%= link_to 'Destroy', rsvp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', rsvp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Rsvp', new_rsvp_path %>
+<%#= link_to 'New Rsvp', new_rsvp_path %>
