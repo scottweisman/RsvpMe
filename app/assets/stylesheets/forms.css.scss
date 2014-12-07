@@ -1,3 +1,12 @@
+.form_container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 40px;
+  @media only screen and (min-device-width : 760px) {
+    padding-top: 90px;
+  }
+}
+
 .form-inputs {
   margin: 20px 0;
 }

@@ -3,10 +3,7 @@
   <%= simple_form_for(@rsvp, remote: true, html: { :"data-parsley-validate" => '' }) do |f| %>
     <h3>We hope you can celebrate with us!</h3>
 
-    <%#= f.error_notification %>
-
     <div class="form-inputs">
-      <%#= f.input :name, label: "Your Name" %>
       <div class="input string required rsvp_name">
         <label class="string required" for="rsvp_name">Your Name</label>
         <input class="string required" id="rsvp_name" name="rsvp[name]" type="text" data-parsley-error-message="Please enter your name." required autofocus>
