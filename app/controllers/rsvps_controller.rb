@@ -2,7 +2,7 @@ class RsvpsController < ApplicationController
 
   def index
     @rsvps = Rsvp.all
-    @attending = @rsvps.attending
+    @total_attending = @rsvps.sum(:number)
   end
 
   def show
